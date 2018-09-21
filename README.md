@@ -27,3 +27,19 @@ Eclipse JNoSQL is a Java framework that streamlines the integration of Java appl
 * `docker run -d --name mongodb-instance -p 27017:27017 mongodb`
 * `docker run -d --publish=7474:7474 --publish=7687:7687 neo4j`
   * Go to [http://localhost:7474/browser/](http://localhost:7474/browser/) set new password to **admin**, the default is **neo4j**
+
+
+## Run as Docker-Compose
+
+### Stop and Remove
+
+`docker-compose -f docker-compose.yml down`
+
+### Star fresh environment
+
+`docker-compose -f docker-compose.yml up -d`
+
+###  List services
+`docker-compose -f ft-compose.yml ps`
+
+

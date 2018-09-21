@@ -31,13 +31,14 @@ Eclipse JNoSQL is a Java framework that streamlines the integration of Java appl
 
 ## Run as Docker-Compose
 
+### Star fresh environment
+
+`docker-compose -f docker-compose.yml up -d`
+
 ### Stop and Remove
 
 `docker-compose -f docker-compose.yml down`
 
-### Star fresh environment
-
-`docker-compose -f docker-compose.yml up -d`
 
 ###  List services
 `docker-compose -f ft-compose.yml ps`

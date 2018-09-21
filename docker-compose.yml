@@ -1,0 +1,36 @@
+version:  '3.2'
+
+services:
+
+    key-value:
+        image: "redis"
+        networks:
+          - jnosqlnet
+        ports:
+          - 6379:6379  
+
+    column:
+        image: "cassandra"
+        networks:
+          - jnosqlnet
+        ports:
+          - 9042:9042
+
+    document:
+        image: "mongo:latest"
+        networks:
+          - jnosqlnet
+        ports:
+          - 27017:27017
+
+    graph:
+        image: "neo4j"
+        networks:
+          - jnosqlnet
+        ports:
+          - 7474:7474
+          - 7687:7687
+
+
+networks:
+    jnosqlnet:

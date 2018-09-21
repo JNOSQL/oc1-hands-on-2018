@@ -13,21 +13,17 @@
  * Otavio Santana
  */
 
-package org.jnosql.artemis.demo.se.cassandra;
+package org.jnosql.demo.column;
 
-
-import org.jnosql.artemis.cassandra.column.CassandraTemplate;
-import org.jnosql.artemis.column.ColumnTemplate;
-import org.jnosql.diana.api.column.ColumnQuery;
 
 import javax.enterprise.inject.se.SeContainer;
 import javax.enterprise.inject.se.SeContainerInitializer;
 import java.util.Arrays;
 import java.util.Optional;
 
-import static org.jnosql.diana.api.column.query.ColumnQueryBuilder.select;
+import static org.jnosql.artemis.DatabaseQualifier.ofColumn;
 
-public class App {
+public class App2 {
 
     private static final Person PERSON = Person.builder().
             withPhones(Arrays.asList("234", "432"))
@@ -38,17 +34,16 @@ public class App {
     public static void main(String[] args) {
 
         try(SeContainer container = SeContainerInitializer.newInstance().initialize()) {
-            ColumnTemplate template =  container.select(CassandraTemplate.class).get();
-            Person saved = template.insert(PERSON);
+            PersonRepository repository = container.select(PersonRepository.class).select(ofColumn()).get();
+            Person saved = repository.save(PERSON);
             System.out.println("Person saved" + saved);
 
-            ColumnQuery query = select().from("Person").where("id").eq(1L).build();
-
-            Optional<Person> person = template.singleResult(query);
+            Optional<Person> person = repository.findById(1L);
             System.out.println("Entity found: " + person);
 
         }
     }
 
-    private App() {}
+
+    private App2() {}
 }

@@ -13,21 +13,21 @@
  * Otavio Santana
  */
 
-package org.jnosql.artemis.demo.se.cassandra;
+package org.jnosql.demo.column;
 
 
-import com.datastax.driver.core.ConsistencyLevel;
 import org.jnosql.artemis.cassandra.column.CassandraTemplate;
+import org.jnosql.artemis.column.ColumnTemplate;
 import org.jnosql.diana.api.column.ColumnQuery;
 
 import javax.enterprise.inject.se.SeContainer;
 import javax.enterprise.inject.se.SeContainerInitializer;
 import java.util.Arrays;
-import java.util.List;
+import java.util.Optional;
 
 import static org.jnosql.diana.api.column.query.ColumnQueryBuilder.select;
 
-public class App3 {
+public class App {
 
     private static final Person PERSON = Person.builder().
             withPhones(Arrays.asList("234", "432"))
@@ -37,19 +37,18 @@ public class App3 {
 
     public static void main(String[] args) {
 
-        try (SeContainer container = SeContainerInitializer.newInstance().initialize()) {
-            CassandraTemplate cassandraTemplate = container.select(CassandraTemplate.class).get();
-            Person saved = cassandraTemplate.save(PERSON, ConsistencyLevel.ONE);
+        try(SeContainer container = SeContainerInitializer.newInstance().initialize()) {
+            ColumnTemplate template =  container.select(CassandraTemplate.class).get();
+            Person saved = template.insert(PERSON);
             System.out.println("Person saved" + saved);
 
             ColumnQuery query = select().from("Person").where("id").eq(1L).build();
 
-            List<Person> people = cassandraTemplate.cql("select * from developers.Person where id = 1");
-            System.out.println("Entity found: " + people);
+            Optional<Person> person = template.singleResult(query);
+            System.out.println("Entity found: " + person);
 
         }
     }
 
-    private App3() {
-    }
+    private App() {}
 }

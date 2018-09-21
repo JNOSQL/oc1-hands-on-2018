@@ -13,7 +13,7 @@
  * Otavio Santana
  */
 
-package org.jnosql.artemis.demo.se.cassandra;
+package org.jnosql.demo.column;
 
 
 import org.jnosql.artemis.cassandra.column.CQL;

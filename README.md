@@ -24,3 +24,4 @@ Eclipse JNoSQL is a Java framework that streamlines the integration of Java appl
 * `docker run -d --name casandra-instance -p 9042:9042 cassandra`
 * `docker run -d --name mongodb-instance -p 27017:27017 mongodb`
 * `docker run -d --publish=7474:7474 --publish=7687:7687 neo4j`
+  * Go to [http://localhost:7474/browser/](http://localhost:7474/browser/) set new password, the default is *neo4j*

@@ -13,7 +13,7 @@
  * Otavio Santana
  */
 
-package org.jnosql.artemis.demo.se.hazelcast;
+package org.jnosql.artemis.demo.se.redis;
 
 
 import org.jnosql.artemis.Entity;
@@ -47,7 +47,7 @@ public class User implements Serializable {
         return phones;
     }
 
-    User() {
+    public User() {
     }
 
     User(String userName, String name, List<String> phones) {

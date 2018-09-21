@@ -37,7 +37,7 @@
         </dependency>
         <dependency>
             <groupId>org.jnosql.diana</groupId>
-            <artifactId>hazelcast-driver</artifactId>
+            <artifactId>redis-driver</artifactId>
             <version>${jnosql.version}</version>
         </dependency>
     </dependencies>

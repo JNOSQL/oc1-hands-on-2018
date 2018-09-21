@@ -1,10 +1,11 @@
-# oc1-hands-on-2018
-Eclipse JNoSQL Hands-on lab at Oracle Code One 2018.
+# Eclipse JNoSQL: One API to Many NoSQL Databases - BYOL [HOL5998]
 
+Eclipse JNoSQL is a Java framework that streamlines the integration of Java applications with NoSQL databases. It defines a set of APIs and provides a standard implementation for most NoSQL databases. This clearly helps achieve very low coupling with the underlying NoSQL technologies used in applications. The objective of this session is to show how to use the Eclipse JNoSQL framework to connect with a NoSQL database and perform operations to manipulate and extract information.
 
 ## Requirements
 
-* link:http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html(Java 8)
+
+* [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * Maven 3 or higher
 * Docker 17.12.1-ce or higher
 * Docker-Compose 1.21.2 or higher

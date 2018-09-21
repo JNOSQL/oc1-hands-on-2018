@@ -23,4 +23,4 @@ Eclipse JNoSQL is a Java framework that streamlines the integration of Java appl
 * `docker run --name redis-instance -p 6379:6379 -d redis`
 * `docker run -d --name casandra-instance -p 9042:9042 cassandra`
 * `docker run -d --name mongodb-instance -p 27017:27017 mongodb`
-* `docker run --publish=7474:7474 --publish=7687:7687 --volume=$HOME/neo4j/data:/data neo4j`
+* `docker run -d --publish=7474:7474 --publish=7687:7687 neo4j`

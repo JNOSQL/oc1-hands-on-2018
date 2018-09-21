@@ -33,10 +33,6 @@
         <jnosql.version>0.0.6</jnosql.version>
     </properties>
 
-    <modules>
-        <module>artemis-demo-java-se</module>
-    </modules>
-
    <dependencies>
         <dependency>
             <groupId>org.jboss.weld.se</groupId>

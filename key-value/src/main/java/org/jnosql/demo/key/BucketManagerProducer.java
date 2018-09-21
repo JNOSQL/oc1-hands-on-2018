@@ -13,11 +13,12 @@
  * Otavio Santana
  */
 
-package org.jnosql.artemis.demo.se.redis;
+package org.jnosql.demo.key;
 
 
 import org.jnosql.diana.api.key.BucketManager;
-import org.jnosql.diana.redis.key.RedisBucketManagerFactory;
+import org.jnosql.diana.api.key.BucketManagerFactory;
+import org.jnosql.diana.api.key.KeyValueConfiguration;
 import org.jnosql.diana.redis.key.RedisConfiguration;
 
 import javax.annotation.PostConstruct;
@@ -29,21 +30,22 @@ public class BucketManagerProducer {
 
     private static final String BUCKET = "developers";
 
-    private RedisConfiguration configuration;
-
-    private RedisBucketManagerFactory managerFactory;
+    private BucketManagerFactory<BucketManager> managerFactory;
 
     @PostConstruct
     public void init() {
-        configuration = new RedisConfiguration();
+        KeyValueConfiguration<?> configuration = getConfiguration();
         managerFactory = configuration.get();
     }
-
 
     @Produces
     public BucketManager getManager() {
         return managerFactory.getBucketManager(BUCKET);
 
+    }
+
+    private KeyValueConfiguration<?> getConfiguration() {
+        return new RedisConfiguration();
     }
 
 }

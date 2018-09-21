@@ -13,7 +13,7 @@
  * Otavio Santana
  */
 
-package org.jnosql.artemis.demo.se.redis;
+package org.jnosql.demo.key;
 
 
 import org.jnosql.artemis.Entity;

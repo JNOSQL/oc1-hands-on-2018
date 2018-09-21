@@ -13,7 +13,7 @@
  * Otavio Santana
  */
 
-package org.jnosql.artemis.demo.se.mongodb;
+package org.jnosql.demo.document;
 
 
 import org.jnosql.artemis.Column;

@@ -13,43 +13,44 @@
  * Otavio Santana
  */
 
-package org.jnosql.demo.column;
+package org.jnosql.demo.document;
 
 
-import com.datastax.driver.core.ConsistencyLevel;
-import org.jnosql.artemis.cassandra.column.CassandraTemplate;
-import org.jnosql.diana.api.column.ColumnQuery;
+import org.jnosql.artemis.DatabaseQualifier;
 
 import javax.enterprise.inject.se.SeContainer;
 import javax.enterprise.inject.se.SeContainerInitializer;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
-import static org.jnosql.diana.api.column.query.ColumnQueryBuilder.select;
+public class App2 {
 
-public class App3 {
-
-    private static final Person PERSON = Person.builder().
-            withPhones(Arrays.asList("234", "432"))
-            .withName("Name")
-            .withId(1)
-            .withIgnore("Just Ignore").build();
 
     public static void main(String[] args) {
 
+        Random random = new Random();
+        Long id = random.nextLong();
+
         try (SeContainer container = SeContainerInitializer.newInstance().initialize()) {
-            CassandraTemplate cassandraTemplate = container.select(CassandraTemplate.class).get();
-            Person saved = cassandraTemplate.save(PERSON, ConsistencyLevel.ONE);
-            System.out.println("Person saved" + saved);
 
-            ColumnQuery query = select().from("Person").where("id").eq(1L).build();
+            Person person = Person.builder().
+                    withPhones(Arrays.asList("234", "432"))
+                    .withName("Name")
+                    .withId(id)
+                    .build();
 
-            List<Person> people = cassandraTemplate.cql("select * from developers.Person where id = 1");
+            PersonRepository repository = container.select(PersonRepository.class)
+                    .select(DatabaseQualifier.ofDocument()).get();
+            repository.save(person);
+
+            List<Person> people = repository.findByName("Name");
             System.out.println("Entity found: " + people);
+            //repository.findByPhones("234").forEach(System.out::println);
 
         }
     }
 
-    private App3() {
+    private App2() {
     }
 }

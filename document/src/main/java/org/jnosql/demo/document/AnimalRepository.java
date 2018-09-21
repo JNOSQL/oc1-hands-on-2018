@@ -12,19 +12,9 @@
  *
  * Otavio Santana
  */
-
-package org.jnosql.artemis.demo.se.mongodb;
-
+package org.jnosql.demo.document;
 
 import org.jnosql.artemis.Repository;
 
-import java.util.List;
-import java.util.stream.Stream;
-
-public interface PersonRepository extends Repository<Person, Long> {
-
-
-    List<Person> findByName(String name);
-
-    Stream<Person> findByPhones(String phone);
+public interface AnimalRepository extends Repository<Animal, String> {
 }

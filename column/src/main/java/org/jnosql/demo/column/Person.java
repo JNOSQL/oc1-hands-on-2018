@@ -37,9 +37,6 @@ public class Person {
     @Column
     private List<String> phones;
 
-    private String ignore;
-
-
     public long getId() {
         return id;
     }
@@ -53,18 +50,14 @@ public class Person {
         return phones;
     }
 
-    public String getIgnore() {
-        return ignore;
-    }
 
     public Person() {
     }
 
-    Person(long id, String name, List<String> phones, String ignore) {
+    Person(long id, String name, List<String> phones) {
         this.id = id;
         this.name = name;
         this.phones = phones;
-        this.ignore = ignore;
     }
 
     @Override
@@ -73,7 +66,6 @@ public class Person {
                 .append("id", id)
                 .append("name", name)
                 .append("phones", phones)
-                .append("ignore", ignore)
                 .toString();
     }
 

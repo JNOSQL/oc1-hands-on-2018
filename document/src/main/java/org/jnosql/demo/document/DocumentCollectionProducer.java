@@ -13,19 +13,20 @@
  * Otavio Santana
  */
 
-package org.jnosql.artemis.demo.se.mongodb;
+package org.jnosql.demo.document;
 
 
 import org.jnosql.diana.api.document.DocumentCollectionManager;
 import org.jnosql.diana.api.document.DocumentCollectionManagerFactory;
 import org.jnosql.diana.api.document.DocumentConfiguration;
+import org.jnosql.diana.mongodb.document.MongoDBDocumentConfiguration;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Produces;
 
 @ApplicationScoped
-public class MongoDBProducer {
+public class DocumentCollectionProducer {
 
     private static final String COLLECTION = "developers";
 
@@ -43,8 +44,8 @@ public class MongoDBProducer {
 
     }
 
-    private DocumentConfiguration<DocumentCollectionManagerFactory> getConfiguration() {
-        throw new UnsupportedOperationException("Don't forget to add a driver as dependency and set its implementation here.");
+    private DocumentConfiguration<?> getConfiguration() {
+        return new MongoDBDocumentConfiguration();
     }
 
 }

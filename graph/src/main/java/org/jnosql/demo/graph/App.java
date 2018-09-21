@@ -13,7 +13,7 @@
  * Otavio Santana
  */
 
-package org.jnosql.artemis.demo.se.graph;
+package org.jnosql.demo.graph;
 
 
 import org.apache.tinkerpop.gremlin.structure.Graph;
@@ -26,12 +26,11 @@ import java.util.List;
 import static java.util.stream.Collectors.toList;
 import static org.apache.tinkerpop.gremlin.process.traversal.P.between;
 import static org.apache.tinkerpop.gremlin.process.traversal.P.gte;
-import static org.jnosql.artemis.demo.se.graph.Person.builder;
 
-public final class MarketingApp {
+public final class App {
 
 
-    private MarketingApp() {
+    private App() {
     }
 
 
@@ -41,16 +40,16 @@ public final class MarketingApp {
             GraphTemplate graph = container.select(GraphTemplate.class).get();
             Graph thinkerpop = container.select(Graph.class).get();
 
-            graph.insert(builder().withAge(30L).withName("Banner")
+            graph.insert(Person.builder().withAge(30L).withName("Banner")
                     .withOccupation("Developer").withSalary(3_000D).build());
 
-            graph.insert(builder().withAge(32L).withName("Natalia")
+            graph.insert(Person.builder().withAge(32L).withName("Natalia")
                     .withOccupation("Developer").withSalary(5_000D).build());
 
-            graph.insert(builder().withAge(40L).withName("Rose")
+            graph.insert(Person.builder().withAge(40L).withName("Rose")
                     .withOccupation("Design").withSalary(1_000D).build());
 
-            graph.insert(builder().withAge(22L).withName("tony")
+            graph.insert(Person.builder().withAge(22L).withName("tony")
                     .withOccupation("Developer").withSalary(4_500D).build());
 
 

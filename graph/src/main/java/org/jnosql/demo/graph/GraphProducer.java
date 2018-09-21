@@ -12,7 +12,7 @@
  *
  *   Otavio Santana
  */
-package org.jnosql.artemis.demo.se.graph;
+package org.jnosql.demo.graph;
 
 import com.steelbridgelabs.oss.neo4j.structure.Neo4JElementIdProvider;
 import com.steelbridgelabs.oss.neo4j.structure.Neo4JGraph;

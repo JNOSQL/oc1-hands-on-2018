@@ -12,7 +12,7 @@
  *
  * Otavio Santana
  */
-package org.jnosql.artemis.demo.se.graph.infrastructure;
+package org.jnosql.demo.graph.infrastructure;
 
 
 import org.jnosql.artemis.ConfigurationReader;

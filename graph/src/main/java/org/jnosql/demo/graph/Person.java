@@ -13,7 +13,7 @@
  * Otavio Santana
  */
 
-package org.jnosql.artemis.demo.se.graph;
+package org.jnosql.demo.graph;
 
 
 import org.jnosql.artemis.Column;

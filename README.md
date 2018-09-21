@@ -5,6 +5,7 @@ Eclipse JNoSQL is a Java framework that streamlines the integration of Java appl
 ## Requirements
 
 
+* [Git](https://git-scm.com/book/en/v1/Getting-Started-Installing-Git)
 * [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * [Maven 3 or higher Configured](https://maven.apache.org/download.cgi)
 * [Docker 17.12.1-ce or higher](https://docs.docker.com/install/#next-release)

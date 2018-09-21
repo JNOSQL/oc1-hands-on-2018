@@ -17,6 +17,15 @@ Eclipse JNoSQL is a Java framework that streamlines the integration of Java appl
 
 
 
+## Run the code
+
+* `git clone git@github.com:JNOSQL/oc1-hands-on-2018.git`
+* `cd oc1-hands-on-2018`
+* `mvn clean install`
+* Run databases
+  * Run Docker instances
+  * Run Docker Compose
+
 ## Run Docker instances
 
 ![Docker](https://www.docker.com/sites/default/files/horizontal_large.png)

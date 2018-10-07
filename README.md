@@ -19,14 +19,14 @@ Eclipse JNoSQL is a Java framework that streamlines the integration of Java appl
 
 ## Run the code
 
-* `git clone git@github.com:JNOSQL/oc1-hands-on-2018.git`
+* `git clone https://github.com/JNOSQL/oc1-hands-on-2018.git`
 * `cd oc1-hands-on-2018`
 * `mvn clean install`
 * Run databases
   * Run Docker instances
   * Run Docker Compose
 
-## Run Docker instances
+### Run Docker instances
 
 ![Docker](https://www.docker.com/sites/default/files/horizontal_large.png)
 
@@ -38,18 +38,17 @@ Eclipse JNoSQL is a Java framework that streamlines the integration of Java appl
   * Go to [http://localhost:7474/browser/](http://localhost:7474/browser/) set new password to **admin**, the default is **neo4j**
 
 
-## Run as Docker-Compose
+### Run as Docker-Compose
 
-### Star fresh environment
+#### Start fresh environment
 
 `docker-compose -f docker-compose.yml up -d`
 
-### Stop and Remove
+#### Stop and Remove
 
 `docker-compose -f docker-compose.yml down`
 
-
-###  List services
+####  List services
 `docker-compose -f ft-compose.yml ps`
 
 

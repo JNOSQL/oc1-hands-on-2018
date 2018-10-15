@@ -12,7 +12,7 @@ This part has one configuration file and six classes
 
 * [src/main/resources/META-INF/beans.xml](src/main/resources/META-INF/beans.xml): File to uses CDI
 
-* [org/jnosql/demo/column/ColumnFamilyManagerProducer](src/main/java/org/jnosql/demo/graph/ColumnFamilyManagerProducer.java):
+* [org/jnosql/demo/column/ColumnFamilyManagerProducer.java](org/jnosql/demo/column/ColumnFamilyManagerProducer.java):
 
 * [org/jnosql/demo/column/Person](src/main/java/org/jnosql/demo/graph/Person.java): This class is a `org.jnosql.artemis.Entity` to model a Person
 

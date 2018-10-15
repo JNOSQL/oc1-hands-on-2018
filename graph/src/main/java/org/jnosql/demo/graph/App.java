@@ -49,7 +49,7 @@ public final class App {
             graph.insert(Person.builder().withAge(40L).withName("Rose")
                     .withOccupation("Design").withSalary(1_000D).build());
 
-            graph.insert(Person.builder().withAge(22L).withName("tony")
+            graph.insert(Person.builder().withAge(22L).withName("Tony")
                     .withOccupation("Developer").withSalary(4_500D).build());
 
 
@@ -61,10 +61,10 @@ public final class App {
 
             Person rose = getPerson("Rose", graph);
 
-            Person tony = getPerson("tony", graph);
+            Person Tony = getPerson("Tony", graph);
 
-            graph.edge(tony, "knows", rose).add("feel", "love");
-            graph.edge(tony, "knows", natalia);
+            graph.edge(Tony, "knows", rose).add("feel", "love");
+            graph.edge(Tony, "knows", natalia);
 
             graph.edge(natalia, "knows", rose);
             graph.edge(banner, "knows", rose);
@@ -107,6 +107,8 @@ public final class App {
             System.out.println("Person who the Developers target know: " + peopleWhoDeveloperKnows);
             System.out.println("The person and the developers target: " + both);
             System.out.println("Developers to Valentine days: " + couple);
+
+            System.out.println("xxxxxxXxxxxxxxxxxxx " );
 
         }
     }

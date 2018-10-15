@@ -8,14 +8,28 @@
 
 ## Check the code
 
-This part has XXXX configuration files and XXXX classes
+This part has one configuration file and seven classes
 
 
 * [src/main/resources/META-INF/beans.xml](src/main/resources/META-INF/beans.xml): File to uses CDI
 
 * [src/main/resources/META-INF/beans.xml](src/main/resources/META-INF/beans.xml): File to uses CDI
 
-//TODO ADD CLASSES AND CONFIGURATION FILE WITH SMALL DESCRIPTION, FOR APP CLASSES EXPLAIN SOME LINES OF CODE SO ATTENDEES CAN UNDERSTAND THEM, YOU CAN LOOK OVER THE GRAPH README
+
+* [src/main/java/org/jnosql/demo/key/BucketManagerProducer](src/main/java/org/jnosql/demo/key/BucketManagerProducer.java)
+
+* [src/main/java/org/jnosql/demo/key/User](src/main/java/org/jnosql/demo/key/User.java): This class is a org.jnosql.artemis.Entity to model a User
+
+* [src/main/java/org/jnosql/demo/key/UserBuilder](src/main/java/org/jnosql/demo/key/UserBuilder.java) 
+
+* [src/main/java/org/jnosql/demo/key/UserEvent](src/main/java/org/jnosql/demo/key/UserEvent.java)
+
+* [src/main/java/org/jnosql/demo/key/UserRepository](src/main/java/org/jnosql/demo/key/UserRepository.java)
+
+* [src/main/java/org/jnosql/demo/key/App](src/main/java/org/jnosql/demo/key/App.java)
+
+* [src/main/java/org/jnosql/demo/key/App2](src/main/java/org/jnosql/demo/key/App2.java)
+
 
 
 ## Start the workshop

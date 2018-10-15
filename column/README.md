@@ -7,30 +7,34 @@
 
 ## Check the code
 
-This part has one configuration file and six classes
+This part has two configuration files and six classes
 
 
 * [src/main/resources/META-INF/beans.xml](src/main/resources/META-INF/beans.xml): File to uses CDI
 
-* [org.jnosql.demo.column.ColumnFamilyManagerProducer](src/main/java/org/jnosql/demo/column/ColumnFamilyManagerProducer.java):
+* [src/main/resources/diana-cassandra.properties](src/main/resources/diana-cassandra.properties): File to configure connection to DB
+
+* [org.jnosql.demo.column.ColumnFamilyManagerProducer](src/main/java/org/jnosql/demo/column/ColumnFamilyManagerProducer.java): Connection handler
 
 * [org.jnosql.demo.column.Person](src/main/java/org/jnosql/demo/column/Person.java): This class is a `org.jnosql.artemis.Entity` to model a Person
 
-* [org.jnosql.demo.column.PersonBuilder](src/main/java/org/jnosql/demo/column/PersonBuilder.java): 
+* [org.jnosql.demo.column.PersonBuilder](src/main/java/org/jnosql/demo/column/PersonBuilder.java): builder to create a Person entity
 
-* [org.jnosql.demo.column.PersonRepository](src/main/java/org/jnosql/demo/column/PersonRepository.java): 
+* [org.jnosql.demo.column.PersonRepository](src/main/java/org/jnosql/demo/column/PersonRepository.java): Artemis Repository for Person entity
 
 * [org.jnosql.demo.column.App](src/main/java/org/jnosql/demo/column/App.java): This class will be used to make the exercises.
-	* This class creates and persist into Cassandra one person with two telephone numbers and whith Id 1:
+	* This class creates and persist into Cassandra one person with two telephone numbers and whith Id 1 and then queries it:
 	```java
-	Person.builder().
-            withPhones(Arrays.asList("234", "432"))
-            .withName("Name")
-            .withId(1)
-            .build();
+	private static final Person PERSON = Person.builder()
+					     .withPhones(Arrays.asList("234", "432"))
+					     .withName("Name").withId(1).build();
 	  
-
-* [org.jnosql.demo.column.App2](src/main/java/org/jnosql/demo/column/App2.java): 
+* [org.jnosql.demo.column.App2](src/main/java/org/jnosql/demo/column/App2.java): This class will be used to make the exercises.
+	* This class creates and persist into Cassandra one person with two telephone numbers and whith Id 1 and then queries it:
+	```java
+	private static final Person PERSON = Person.builder()
+					    .withPhones(Arrays.asList("234", "432"))
+					    .withName("Name").withId(1).build();
 
 
 ## Start the workshop

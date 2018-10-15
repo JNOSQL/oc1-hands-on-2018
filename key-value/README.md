@@ -13,19 +13,19 @@ This part has one configuration file and seven classes
 
 * [src/main/resources/META-INF/beans.xml](src/main/resources/META-INF/beans.xml): File to uses CDI
 
-* [src/main/java/org/jnosql/demo/key/BucketManagerProducer](src/main/java/org/jnosql/demo/key/BucketManagerProducer.java)
+* [org.jnosql.demo.key.BucketManagerProducer](src/main/java/org/jnosql/demo/key/BucketManagerProducer.java)
 
-* [src/main/java/org/jnosql/demo/key/User](src/main/java/org/jnosql/demo/key/User.java): This class is a org.jnosql.artemis.Entity to model a User
+* [org.jnosql.demo.key.User](src/main/java/org/jnosql/demo/key/User.java): This class is a org.jnosql.artemis.Entity to model a User
 
-* [src/main/java/org/jnosql/demo/key/UserBuilder](src/main/java/org/jnosql/demo/key/UserBuilder.java) 
+* [org.jnosql.demo.key.UserBuilder](src/main/java/org/jnosql/demo/key/UserBuilder.java) 
 
-* [src/main/java/org/jnosql/demo/key/UserEvent](src/main/java/org/jnosql/demo/key/UserEvent.java)
+* [org.jnosql.demo.key.UserEvent](src/main/java/org/jnosql/demo/key/UserEvent.java)
 
-* [src/main/java/org/jnosql/demo/key/UserRepository](src/main/java/org/jnosql/demo/key/UserRepository.java)
+* [org.jnosql.demo.key.UserRepository](src/main/java/org/jnosql/demo/key/UserRepository.java)
 
-* [src/main/java/org/jnosql/demo/key/App](src/main/java/org/jnosql/demo/key/App.java)
+* [org.jnosql.demo.key.App](src/main/java/org/jnosql/demo/key/App.java)
 
-* [src/main/java/org/jnosql/demo/key/App2](src/main/java/org/jnosql/demo/key/App2.java)
+* [org.jnosql.demo.key.App2](src/main/java/org/jnosql/demo/key/App2.java)
 
 
 

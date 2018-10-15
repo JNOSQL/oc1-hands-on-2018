@@ -12,15 +12,15 @@ This part has one configuration file and six classes
 
 * [src/main/resources/META-INF/beans.xml](src/main/resources/META-INF/beans.xml): File to uses CDI
 
-* [/org/jnosql/demo/column/ColumnFamilyManagerProducer](src/main/java/org/jnosql/demo/graph/ColumnFamilyManagerProducer.java):
+* [org/jnosql/demo/column/ColumnFamilyManagerProducer](src/main/java/org/jnosql/demo/graph/ColumnFamilyManagerProducer.java):
 
-* [/org/jnosql/demo/column/Person](src/main/java/org/jnosql/demo/graph/Person.java): This class is a `org.jnosql.artemis.Entity` to model a Person
+* [org/jnosql/demo/column/Person](src/main/java/org/jnosql/demo/graph/Person.java): This class is a `org.jnosql.artemis.Entity` to model a Person
 
-* [/org/jnosql/demo/column/PersonBuilder](src/main/java/org/jnosql/demo/graph/PersonBuilder.java): 
+* [org/jnosql/demo/column/PersonBuilder](src/main/java/org/jnosql/demo/graph/PersonBuilder.java): 
 
-* [/org/jnosql/demo/column/PersonRepository](src/main/java/org/jnosql/demo/graph/PersonRepository.java): 
+* [org/jnosql/demo/column/PersonRepository](src/main/java/org/jnosql/demo/graph/PersonRepository.java): 
 
-* [/org/jnosql/demo/column/App](src/main/java/org/jnosql/demo/graph/App.java): This class will be used to make the exercises.
+* [org/jnosql/demo/column/App](src/main/java/org/jnosql/demo/graph/App.java): This class will be used to make the exercises.
 	* This class creates and persist into Cassandra one person with two telephone numbers and whith Id 1:
 	```java
 	Person.builder().
@@ -30,7 +30,7 @@ This part has one configuration file and six classes
             .build();
 	  
 
-* [/org/jnosql/demo/column/App2](src/main/java/org/jnosql/demo/graph/App2.java): 
+* [org/jnosql/demo/column/App2](src/main/java/org/jnosql/demo/graph/App2.java): 
 
 
 ## Start the workshop

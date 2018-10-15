@@ -13,9 +13,6 @@ This part has one configuration file and seven classes
 
 * [src/main/resources/META-INF/beans.xml](src/main/resources/META-INF/beans.xml): File to uses CDI
 
-* [src/main/resources/META-INF/beans.xml](src/main/resources/META-INF/beans.xml): File to uses CDI
-
-
 * [src/main/java/org/jnosql/demo/key/BucketManagerProducer](src/main/java/org/jnosql/demo/key/BucketManagerProducer.java)
 
 * [src/main/java/org/jnosql/demo/key/User](src/main/java/org/jnosql/demo/key/User.java): This class is a org.jnosql.artemis.Entity to model a User

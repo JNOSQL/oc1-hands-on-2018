@@ -68,30 +68,6 @@ You can follow any order but we recommend next (You can find instructions by cli
 
 
 
-
-## Challenges
-
-### Use case #1 - Key/Value
-
-* Create a database to handle JUG information using Redis
-* Create, Retrieve and Update JUG information
-* Where the JUG name is the unique value.
-
-
-### Use case #2 - Document
-
-* Implement some searches against a MongoDB
-* Search JUG members in a given city
-* Search JUG members of legal drinking age
-* Search JUGs in a region
-
-
-### Use case #3 - Graph (Bonus)
-
-* Implement recommendation searches against Neo4J
-* Find Beginner Java Users that know Advanced Java User(s).
-* Find Java Users in a given City
-* Recommend Advanced Java Users in the same City as a given User.
  
  
  #### Model 

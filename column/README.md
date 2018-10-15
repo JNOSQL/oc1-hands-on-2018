@@ -4,18 +4,45 @@
 
 **Cassandra**: Apache Cassandra is a free and open-source distributed database management system designed to handle large amounts of data across many commodity servers, providing high availability with no single point of failure.
 
-## Using Docker
 
-![Docker](https://www.docker.com/sites/default/files/horizontal_large.png)
+## Check the code
 
-
-1. Install docker: https://www.docker.com/
-1. https://store.docker.com/images/cassandra
-1. Run docker command
-1. `docker run -d --name casandra-instance -p 9042:9042 cassandra`
+This part has XXXX configuration files and XXXX classes
 
 
+* [src/main/resources/META-INF/beans.xml](src/main/resources/META-INF/beans.xml): File to uses CDI
 
-## Run the code
+* [src/main/resources/META-INF/beans.xml](src/main/resources/META-INF/beans.xml): File to uses CDI
 
-With a Cassandra instance running go to the classes **App**.
+
+//TODO ADD CLASSES AND CONFIGURATION FILE WITH SMALL DESCRIPTION, FOR APP CLASSES EXPLAIN SOME LINES OF CODE SO ATTENDEES CAN UNDERSTAND THEM, YOU CAN LOOK OVER THE GRAPH README
+
+
+## Start the workshop
+
+1. Run the Neo4J Docker instance
+
+	```
+	docker run -d --name casandra-instance -p 9042:9042 cassandra
+	```
+  
+2. Compile the project via Maven 
+	```
+	mvn compile
+	```
+3. Run the project via Maven 
+	```
+	mvn exec:java -Dexec.mainClass="org.jnosql.demo.column.App"
+	
+	mvn exec:java -Dexec.mainClass="org.jnosql.demo.column.App2"
+	```
+	
+## Time to practice
+
+Now, It is time you explore the code: add new persons, more relationships, and create new queries. 
+Also you can try to an create your own entities that can be used to respond some questions, next some ideas: 
+
+* Implement some searches against a MongoDB
+* Search JUG members in a given city
+* Search JUG members of legal drinking age
+* Search JUGs in a region

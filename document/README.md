@@ -12,20 +12,49 @@ To run this project a MongoDB instance is required, so you can use either a loca
 
 ## Check the code
 
-This part has XXXX configuration files and XXXX classes
+This part has 2 configuration files and 8 classes
 
 
-* [src/main/resources/META-INF/beans.xml](src/main/resources/META-INF/beans.xml): File to uses CDI
+* [src/main/resources/META-INF/beans.xml](src/main/resources/META-INF/beans.xml): File to use CDI
 
-* [src/main/resources/META-INF/beans.xml](src/main/resources/META-INF/beans.xml): File to uses CDI
+* [src/main/resources/diana-mongodb.properties](src/main/resources/diana-mongodb.properties): File to configure connection to DB
 
+* [column/src/main/java/org/jnosql/demo/document/DocumentCollectionProducer.java](org/jnosql/demo/document/DocumentCollectionProducer.java): Connection handler
 
-//TODO ADD CLASSES AND CONFIGURATION FILE WITH SMALL DESCRIPTION, FOR APP CLASSES EXPLAIN SOME LINES OF CODE SO ATTENDEES CAN UNDERSTAND THEM, YOU CAN LOOK OVER THE GRAPH README
+* [column/src/main/java/org/jnosql/demo/document/Person](src/main/java/org/jnosql/demo/document/Person.java): This class is a `org.jnosql.artemis.Entity` to model a Person
 
+* [column/src/main/java/org/jnosql/demo/document/Address](src/main/java/org/jnosql/demo/document/Address.java): This class is a `org.jnosql.artemis.Entity` to model an Address
 
+* [column/src/main/java/org/jnosql/demo/document/Job](src/main/java/org/jnosql/demo/document/Job.java): This class is a `org.jnosql.artemis.Entity` to model a Job
+
+* [column/src/main/java/org/jnosql/demo/document/PersonBuilder](src/main/java/org/jnosql/demo/document/PersonBuilder.java): builder to create a Person entity
+
+* [column/src/main/java/org/jnosql/demo/document/PersonRepository](src/main/java/org/jnosql/demo/document/PersonRepository.java): Artemis Repository for Person entity
+
+* [column/src/main/java/org/jnosql/demo/document/App](src/main/java/org/jnosql/demo/document/App.java): This class will be used to make the exercises.
+
+	* This class creates and persist into MongoDB one person with address and job and 2 telephone numbers and then queries it:
+	```java
+Person person = Person.builder().
+                    withPhones(Arrays.asList("234", "432"))
+                    .withName("Name")
+                    .withAddress(address)
+                    .withJob(job)
+                    .withId(id).build();```
+                    
+* [column/src/main/java/org/jnosql/demo/document/App2](src/main/java/org/jnosql/demo/document/App2.java): This class will be used to make the exercises.
+	
+	* This class creates and persist into MongoDB one person with 2 telephone numbers and then queries it:
+	```java
+ Person person = Person.builder().
+                    withPhones(Arrays.asList("234", "432"))
+                    .withName("Name")
+                    .withId(id)
+                    .build(); ```
+	  
 ## Start the workshop
 
-1. Run the Neo4J Docker instance
+1. Run the MongoDB Docker instance
 
 	```
 	docker run -d --name mongodb-instance -p 27017:27017 mongodb

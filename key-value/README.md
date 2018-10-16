@@ -8,24 +8,48 @@
 
 ## Check the code
 
-This part has one configuration file and seven classes
+This part has two configuration files and seven classes
 
 
-* [src/main/resources/META-INF/beans.xml](src/main/resources/META-INF/beans.xml): File to uses CDI
+* [src/main/resources/META-INF/beans.xml](src/main/resources/META-INF/beans.xml):File to uses CDI
 
-* [org.jnosql.demo.key.BucketManagerProducer](src/main/java/org/jnosql/demo/key/BucketManagerProducer.java)
+* [src/main/resources/diana-redis.properties](src/main/resources/diana-redis.properties): File to configure connection to DB
+
+* [org.jnosql.demo.key.BucketManagerProducer](src/main/java/org/jnosql/demo/key/BucketManagerProducer.java): Connection handler
 
 * [org.jnosql.demo.key.User](src/main/java/org/jnosql/demo/key/User.java): This class is a org.jnosql.artemis.Entity to model a User
 
-* [org.jnosql.demo.key.UserBuilder](src/main/java/org/jnosql/demo/key/UserBuilder.java) 
+* [org.jnosql.demo.key.UserBuilder](src/main/java/org/jnosql/demo/key/UserBuilder.java): builder to create a User entity
 
 * [org.jnosql.demo.key.UserEvent](src/main/java/org/jnosql/demo/key/UserEvent.java)
 
-* [org.jnosql.demo.key.UserRepository](src/main/java/org/jnosql/demo/key/UserRepository.java)
+* [org.jnosql.demo.key.UserRepository](src/main/java/org/jnosql/demo/key/UserRepository.java)  Artemis Repository for User entity
 
-* [org.jnosql.demo.key.App](src/main/java/org/jnosql/demo/key/App.java)
+* [org.jnosql.demo.key.App](src/main/java/org/jnosql/demo/key/App.java) This class will be used to make the exercises.
 
-* [org.jnosql.demo.key.App2](src/main/java/org/jnosql/demo/key/App2.java)
+This class creates and persist into Diana-redis one user with two telephone numbers whith username, name and then queries it:
+
+```Java
+	private static final User USER = User.builder()
+         				.withPhones(Arrays.asList("234", "432"))
+            				.withUsername("username")
+            				.withName("Name")
+            				.build();
+
+ ```
+
+* [org.jnosql.demo.key.App2](src/main/java/org/jnosql/demo/key/App2.java) This class will be used to make the exercises.
+
+This class creates and persist into Diana-redis one user with two telephone numbers whith username, name and then queries it:
+
+```Java
+	private static final User USER = User.builder()
+         				.withPhones(Arrays.asList("234", "432"))
+            				.withUsername("username")
+            				.withName("Name")
+            				.build();
+
+ ```
 
 
 

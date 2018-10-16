@@ -19,7 +19,7 @@ This part has 2 configuration files and 8 classes
 
 * [src/main/resources/diana-mongodb.properties](src/main/resources/diana-mongodb.properties): File to configure connection to DB
 
-* [column/src/main/java/org/jnosql/demo/document/DocumentCollectionProducer.java](org/jnosql/demo/document/DocumentCollectionProducer.java): Connection handler
+* [column/src/main/java/org/jnosql/demo/document/DocumentCollectionProducer.java](src/main/java/org/jnosql/demo/document/DocumentCollectionProducer.java): Connection handler
 
 * [column/src/main/java/org/jnosql/demo/document/Person](src/main/java/org/jnosql/demo/document/Person.java): This class is a `org.jnosql.artemis.Entity` to model a Person
 
@@ -35,22 +35,24 @@ This part has 2 configuration files and 8 classes
 
 	* This class creates and persist into MongoDB one person with address and job and 2 telephone numbers and then queries it:
 	```java
-Person person = Person.builder().
+    Person person = Person.builder().
                     withPhones(Arrays.asList("234", "432"))
                     .withName("Name")
                     .withAddress(address)
                     .withJob(job)
-                    .withId(id).build();```
-                    
+                    .withId(id).build();
+    ```
+                  
 * [column/src/main/java/org/jnosql/demo/document/App2](src/main/java/org/jnosql/demo/document/App2.java): This class will be used to make the exercises.
 	
 	* This class creates and persist into MongoDB one person with 2 telephone numbers and then queries it:
 	```java
- Person person = Person.builder().
+    Person person = Person.builder().
                     withPhones(Arrays.asList("234", "432"))
                     .withName("Name")
                     .withId(id)
-                    .build(); ```
+                .build(); 
+    ```
 	  
 ## Start the workshop
 

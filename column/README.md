@@ -39,7 +39,7 @@ This part has two configuration files and six classes
 
 ## Start the workshop
 
-1. Run the Neo4J Docker instance
+1. Run the Cassandra Docker instance
 
 	```
 	docker run -d --name casandra-instance -p 9042:9042 cassandra

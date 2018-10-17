@@ -55,10 +55,10 @@ This class creates and persist into Diana-redis one user with two telephone numb
 
 ## Start the workshop
 
-1. Run the Neo4J Docker instance
+1. Run the Diana-Redis Docker instance
 
 	```
-	docker run -d --name mongodb-instance -p 27017:27017 mongodb
+	docker run --name redis-instance -p 6379:6379 -d redis
 	```
   
 2. Compile the project via Maven 

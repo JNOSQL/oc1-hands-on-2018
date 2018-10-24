@@ -79,5 +79,3 @@ Also you can try to an create your own entities that can be used to respond some
 * Find Beginner Java Users that know Advanced Java User(s).
 * Find Java Users in a given City
 * Recommend Advanced Java Users in the same City as a given User.
-* Recommend restaurants 
- 

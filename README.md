@@ -55,14 +55,14 @@ Eclipse JNoSQL is a Java framework that streamlines the integration of Java appl
 
 ## Hands on Lab
 
-This workshop is divide in four parts, each of them correspond to a different type of a NoSQL Database. 
+This workshop is divide in four parts, each of them correspond to a different type of a NoSQL Database.
 You can follow any order but we recommend next (You can find instructions by clicking on a NoSQL type):
 
-1. [Key-value](key-value/README.md): this Lab uses Hazelcast
+1. [Key-value](key-value/README.md): this Lab uses Redis
 
 2. [Document](document/README.md): this Lab uses MongoDB
 
-3. [Graph](graph/README.md): this Lab uses Graph-Neo4J 
+3. [Graph](graph/README.md): this Lab uses Graph-Neo4J
 
 4. [Column](column/README.md): this Lab uses Cassandra
 
@@ -70,23 +70,19 @@ You can follow any order but we recommend next (You can find instructions by cli
 
 
 
- 
- 
- #### Model 
- 
+
+
+ #### Model
+
  ##### JUG
- 
+
  * Name
  * City
  * Programming Languages
  * Country
- 
+
  ##### JUG Member
- 
+
  * Name
  * City
  * Programming Languages (name and skill level)
-
-
-
-

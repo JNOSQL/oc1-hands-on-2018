@@ -52,29 +52,22 @@ Eclipse JNoSQL is a Java framework that streamlines the integration of Java appl
 `docker-compose -f ft-compose.yml ps`
 
 
-## Challenges
 
-### Use case #1 - Key/Value
+## Hands on Lab
 
-* Create a database to handle JUG information using Redis
-* Create, Retrieve and Update JUG information
-* Where the JUG name is the unique value.
+This workshop is divide in four parts, each of them correspond to a different type of a NoSQL Database. 
+You can follow any order but we recommend next (You can find instructions by clicking on a NoSQL type):
 
+1. [Graph](graph/README.md): this Lab uses Graph-Neo4J 
 
-### Use case #2 - Document
+2. [Document](document/README.md): this Lab uses MongoDB
 
-* Implement some searches against a MongoDB
-* Search JUG members in a given city
-* Search JUG members of legal drinking age
-* Search JUGs in a region
+3. [Column](column/README.md): this Lab uses Cassandra
+
+4. [Key-value](key-value/README.md): this Lab uses Hazelcast
 
 
-### Use case #3 - Graph (Bonus)
 
-* Implement recommendation searches against Neo4J
-* Find Beginner Java Users that know Advanced Java User(s).
-* Find Java Users in a given City
-* Recommend Advanced Java Users in the same City as a given User.
  
  
  #### Model 
@@ -91,5 +84,7 @@ Eclipse JNoSQL is a Java framework that streamlines the integration of Java appl
  * Name
  * City
  * Programming Languages (name and skill level)
+
+
 
 

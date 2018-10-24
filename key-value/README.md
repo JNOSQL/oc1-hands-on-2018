@@ -1,9 +1,9 @@
 # Key-value
 
-![Hazelcast Project](http://www.jnosql.org/img/logos/hazelcast.svg)
+![Redis Project](https://redis.io/images/redis-white.png)
 
 
-**Hazelcast**:In computing, Hazelcast is an open source in-memory data grid based on Java.
+**Redis**:In computing, Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker.
 
 
 ## Check the code
@@ -55,7 +55,7 @@ This class creates and persist into Diana-redis one user with two telephone numb
 
 ## Start the workshop
 
-1. Run the Diana-Redis Docker instance
+1. Run the Redis Docker instance
 
 	```
 	docker run --name redis-instance -p 6379:6379 -d redis

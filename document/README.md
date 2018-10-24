@@ -15,9 +15,9 @@ To run this project a MongoDB instance is required, so you can use either a loca
 This part has 2 configuration files and 8 classes
 
 
-* [src/main/resources/META-INF/beans.xml](src/main/resources/META-INF/beans.xml): File to use CDI
+* [src/main/resources/META-INF/beans.xml](src/main/resources/META-INF/beans.xml): CDI configuration file
 
-* [src/main/resources/diana-mongodb.properties](src/main/resources/diana-mongodb.properties): File to configure connection to DB
+* [src/main/resources/diana-mongodb.properties](src/main/resources/diana-mongodb.properties): Database connection configuration file
 
 * [column/src/main/java/org/jnosql/demo/document/DocumentCollectionProducer.java](src/main/java/org/jnosql/demo/document/DocumentCollectionProducer.java): Connection handler
 

@@ -10,9 +10,9 @@
 This part has two configuration files and six classes
 
 
-* [src/main/resources/META-INF/beans.xml](src/main/resources/META-INF/beans.xml): File to uses CDI
+* [src/main/resources/META-INF/beans.xml](src/main/resources/META-INF/beans.xml): CDI configuration file
 
-* [src/main/resources/diana-cassandra.properties](src/main/resources/diana-cassandra.properties): File to configure connection to DB
+* [src/main/resources/diana-cassandra.properties](src/main/resources/diana-cassandra.properties): Database connection configuration file
 
 * [org.jnosql.demo.column.ColumnFamilyManagerProducer](src/main/java/org/jnosql/demo/column/ColumnFamilyManagerProducer.java): Connection handler
 

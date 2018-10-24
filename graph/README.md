@@ -13,7 +13,7 @@ To run this project a nEO4j instance is required, so you can use either a local 
 
 This part has two configuration files and four classes
 
-* [src/main/resources/META-INF/beans.xml](src/main/resources/META-INF/beans.xml): File to uses CDI
+* [src/main/resources/META-INF/beans.xml](src/main/resources/META-INF/beans.xml): CDI configuration file
 
 * [src/main/resources/META-INF/jnosql.json](src/main/resources/META-INF/jnosql.json): Database connection configuration file
 

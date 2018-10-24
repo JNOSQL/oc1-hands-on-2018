@@ -11,9 +11,9 @@
 This part has two configuration files and seven classes
 
 
-* [src/main/resources/META-INF/beans.xml](src/main/resources/META-INF/beans.xml):File to uses CDI
+* [src/main/resources/META-INF/beans.xml](src/main/resources/META-INF/beans.xml): CDI configuration file
 
-* [src/main/resources/diana-redis.properties](src/main/resources/diana-redis.properties): File to configure connection to DB
+* [src/main/resources/diana-redis.properties](src/main/resources/diana-redis.properties): Database connection configuration file
 
 * [org.jnosql.demo.key.BucketManagerProducer](src/main/java/org/jnosql/demo/key/BucketManagerProducer.java): Connection handler
 

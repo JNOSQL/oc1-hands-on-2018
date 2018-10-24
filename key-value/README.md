@@ -67,9 +67,9 @@ This class creates and persist into Diana-redis one user with two telephone numb
 	```
 3. Run the project via Maven 
 	```
-	mvn exec:java -Dexec.mainClass="org.jnosql.demo.key-value.App"
+	mvn exec:java -Dexec.mainClass="org.jnosql.demo.key.App"
 	
-	mvn exec:java -Dexec.mainClass="org.jnosql.demo.key-value.App2"
+	mvn exec:java -Dexec.mainClass="org.jnosql.demo.key.App2"
 	```
 	
 ## Time to practice

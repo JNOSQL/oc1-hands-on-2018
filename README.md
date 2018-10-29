@@ -2,6 +2,11 @@
 
 Eclipse JNoSQL is a Java framework that streamlines the integration of Java applications with NoSQL databases. It defines a set of APIs and provides a standard implementation for most NoSQL databases. This clearly helps achieve very low coupling with the underlying NoSQL technologies used in applications. The objective of this session is to show how to use the Eclipse JNoSQL framework to connect with a NoSQL database and perform operations to manipulate and extract information.
 
+
+## Slides
+
+https://www.slideshare.net/otagonsan/eclipse-jnosql-one-api-to-many-nosql-databases-byol-hol5998
+
 ## Requirements
 
 

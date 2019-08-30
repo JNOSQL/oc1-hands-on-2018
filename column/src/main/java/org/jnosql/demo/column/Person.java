@@ -16,8 +16,6 @@
 package org.jnosql.demo.column;
 
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
 import org.jnosql.artemis.Column;
 import org.jnosql.artemis.Entity;
 import org.jnosql.artemis.Id;
@@ -62,11 +60,11 @@ public class Person {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this, ToStringStyle.JSON_STYLE)
-                .append("id", id)
-                .append("name", name)
-                .append("phones", phones)
-                .toString();
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", phones=" + phones +
+                '}';
     }
 
     public static PersonBuilder builder() {
